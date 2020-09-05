@@ -18,7 +18,7 @@ public:
         if(s==Map::State::IDLE){
             qDebug()<<"hello"<<endl;
             QTimer* timer=new QTimer(this);
-            timer->setInterval(1000);
+            timer->setInterval(100);
             timer->start();
             connect(timer,&QTimer::timeout,this,&Map::update);
         }

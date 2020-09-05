@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include"dock.h"
 
 class MainWindow : public QMainWindow
 {
@@ -12,6 +13,7 @@ public:
         GAME,
         EDIT
     };
+    Dock* dock=nullptr;
     Scene scene;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;

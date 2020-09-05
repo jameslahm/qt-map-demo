@@ -29,7 +29,11 @@ void Map::mousePressEvent(QMouseEvent *event){
         return ;
     }
     Terrain *child = dynamic_cast<Terrain*>(childAt(event->pos()));
-    if (!child) return;
+    qDebug()<<child<<endl;
+    if (!child) {
+        qDebug()<<"return"<<endl;
+        return;
+    };
 
     QPixmap pixmap = *child->pixmap();
     QDrag *drag=new QDrag(this);
